@@ -1,0 +1,43 @@
+---
+layout: default
+---
+{% include breadcrumb.html %}
+<article class="glyph wrap">
+  <header class="glyph-header">
+    <h1>{{ page.id }}</h1>
+    <p class="muted">{{ page.short_description }}</p>
+    <dl class="meta">
+      <dt>Origin Mantra</dt>
+      <dd>
+        {% for m in page.mantras %}
+          {% assign mm = site.mantras | where: "name", m | first %}
+          {% if mm %}<a href="{{ mm.url | relative_url }}">{{ mm.title }}</a>{% endif %}
+          {% if forloop.last == false %}, {% endif %}
+        {% endfor %}
+      </dd>
+      <dt>Detected in</dt><dd>{{ page.orb_event }} ({{ page.event_date }})</dd>
+    </dl>
+  </header>
+
+  <section class="glyph-image">
+    <img src="{{ page.image | relative_url }}" alt="Glyph {{ page.id }}">
+  </section>
+
+  <section class="glyph-explain">
+    <h2>Glyph explanation</h2>
+    {{ content }}
+  </section>
+
+  <section class="sequence-context">
+    <h2>Sequence context & related glyphs</h2>
+    <p>Links to other glyphs in the same sequence:</p>
+    <ul>
+      {% for other in page.related_glyphs %}
+        {% assign og = site.glyphs | where: "id", other | first %}
+        {% if og %}
+          <li><a href="{{ og.url | relative_url }}">{{ og.id }}</a> — {{ og.short_description }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+  </article>
