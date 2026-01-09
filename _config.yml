@@ -1,1 +1,28 @@
+title: "Orb Mantra Archive"
+description: "A research archive of Mantra systems extracted from orb light events — field guides, audio, glyphs, and source video."
+url: "https://<your-github-username>.github.io"
+baseurl: "" # set if hosting at /repo-name
+paginate: 0
 
+collections:
+  mantras:
+    output: true
+    permalink: /mantras/:name/
+  glyphs:
+    output: true
+    permalink: /glyphs/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "mantras"
+    values:
+      layout: "mantra"
+  - scope:
+      path: ""
+      type: "glyphs"
+    values:
+      layout: "glyph"
+
+# Build settings to keep URLs clean
+permalink: pretty
