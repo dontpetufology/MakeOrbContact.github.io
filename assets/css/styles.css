@@ -1,0 +1,57 @@
+/* Minimal, neutral/dark research aesthetic */
+
+:root{
+  --bg:#0e1112;
+  --panel:#121416;
+  --muted:#9aa1a6;
+  --text:#e6eef2;
+  --accent:#7aa2b8;
+  --card:#151719;
+  --radius:8px;
+  font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size:16px;
+}
+
+*{box-sizing:border-box}
+body.site{
+  background: linear-gradient(180deg,var(--bg),#0b0d0e);
+  color:var(--text);
+  margin:0;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+.wrap{max-width:1100px;margin:0 auto;padding:1.25rem}
+.site-header{border-bottom:1px solid rgba(255,255,255,0.03);position:sticky;top:0;background:rgba(0,0,0,0.3);backdrop-filter:blur(6px);z-index:50}
+.site-header .wrap{display:flex;gap:1rem;align-items:center}
+.brand{color:var(--text);text-decoration:none;font-size:1rem}
+.main-nav{margin-left:auto;display:flex;gap:0.75rem;align-items:center}
+.main-nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
+.main-nav input{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:.35rem .5rem;border-radius:6px;color:var(--text)}
+
+/* Cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.card{background:var(--card);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(0,0,0,0.6)}
+.card-link{display:block;color:inherit;text-decoration:none;height:100%}
+.card-thumb img{width:100%;height:160px;object-fit:cover;display:block}
+.card-body{padding:0.9rem}
+.card h3{margin:0 0 .25rem 0;font-size:1.05rem}
+.muted{color:var(--muted);font-size:.95rem}
+
+/* Video wrapper */
+.video-wrapper, video{width:100%;max-width:900px;border-radius:8px;overflow:hidden;background:#000}
+.mantra-header{margin-bottom:1rem}
+
+/* Glyph grid small */
+.glyph-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem}
+
+/* Breadcrumb */
+.breadcrumb{font-size:.9rem;color:var(--muted);margin-bottom:.75rem}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:.75rem 0;text-align:center;color:var(--muted)}
+
+@media (max-width:700px){
+  .grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+  .card-thumb img{height:120px}
+  }
