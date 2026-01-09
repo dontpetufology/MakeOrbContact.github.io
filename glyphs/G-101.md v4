@@ -1,0 +1,15 @@
+---
+title: "Glyph G-101"
+id: "G-101"
+short_description: "Primary stabilization glyph; triangular motif."
+image: "/assets/media/glyphs/G-101.png"
+origin_mantra: "mantra-07-stabilization"
+mantras:
+  - "mantra-07-stabilization"
+orb_event: "ORB-20260101-07"
+event_date: "2026-01-01"
+related_glyphs:
+  - "G-102"
+  - "G-103"
+---
+Observational notes on glyph morphology, pixel extraction method, and measured orientation. Explain how G-101 functions sequentially: e.g., precedes G-102 to initiate damping phase. Include image captions, scale, and any processing parameters used.
