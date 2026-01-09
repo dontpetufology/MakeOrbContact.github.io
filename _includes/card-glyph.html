@@ -1,0 +1,11 @@
+<article class="card card-glyph">
+  <a class="card-link" href="{{ glyph.url | relative_url }}" aria-labelledby="glyph-{{ glyph.id }}">
+    <div class="card-thumb">
+      <img src="{{ glyph.image | relative_url }}" alt="Glyph image: {{ glyph.id }}">
+    </div>
+    <div class="card-body">
+      <h4 id="glyph-{{ glyph.id }}">{{ glyph.id }}</h4>
+      <p class="muted">{{ glyph.short_description }}</p>
+    </div>
+  </a>
+</article>
