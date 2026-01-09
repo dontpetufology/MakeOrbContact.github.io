@@ -1,0 +1,8 @@
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ '/' | relative_url }}">Library</a>
+  {% if page.collection == 'mantras' %}
+    › <a href="{{ '/' | relative_url }}">Mantras</a> › <span>{{ page.title }}</span>
+  {% elsif page.collection == 'glyphs' %}
+    › <a href="{{ '/glyphs/' | relative_url }}">Glyphs</a> › <span>{{ page.title }}</span>
+  {% endif %}
+</nav>
