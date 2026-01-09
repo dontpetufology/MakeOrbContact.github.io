@@ -26,6 +26,6 @@ defaults:
 
 # Build settings to keep URLs clean
 permalink: pretty
-remote_theme: just-the-docs/just-the-docs
-color_scheme: dark
-search_enabled: true
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: dark
+search: true
