@@ -1,0 +1,24 @@
+---
+title: "Mantra 07 — Stabilization"
+name: "mantra-07-stabilization"
+pronunciation: "mahn-tra se-ven"
+breath_chart: "Inhale 4s / Hold 2s / Exhale 6s"
+function_short: "Short: Energy stabilization in localized field."
+function_full: >
+  Research description: observed association with rapid amplitude dampening
+  in the outer radiance of orb event ORB-20260101-07. The Mantra's application
+  is documented in field guide FG-2026-01-01-07.pdf.
+orb_event: "ORB-20260101-07"
+event_date: "2026-01-01"
+teams: "Field Unit A"
+thumbnail: "/assets/media/thumbnails/mantra-07.jpg"
+video_path: "/assets/media/videos/ORB-20260101-07.mp4"
+video_copy_location: "Archive vault OP-7"
+field_guide: "/assets/media/guides/FG-2026-01-01-07.pdf"
+pronunciation_video: "/assets/media/videos/mantra-07-pronunciation.mp4"
+transformer_wav: "/assets/media/audio/mantra-07.wav"
+glyphs:
+  - "G-101"
+  - "G-102"
+---
+Detailed field notes and provenance go here. Keep language scientific, cite timestamps in the original video, and include any signal‑processing steps used to extract the glyphs or audio.
