@@ -1,0 +1,15 @@
+<article class="card card-mantra">
+  <a class="card-link" href="{{ mantra.url | relative_url }}" aria-labelledby="mantra-{{ mantra.name }}">
+    <div class="card-thumb">
+      <img src="{{ mantra.thumbnail | relative_url }}" alt="Thumbnail for {{ mantra.title }}">
+    </div>
+    <div class="card-body">
+      <h3 id="mantra-{{ mantra.name }}">{{ mantra.title }}</h3>
+      <p class="muted">{{ mantra.function_short }}</p>
+      <dl class="meta">
+        <dt>Orb event:</dt><dd>{{ mantra.orb_event }}</dd>
+        <dt>Date:</dt><dd>{{ mantra.event_date }}</dd>
+      </dl>
+    </div>
+  </a>
+</article>
