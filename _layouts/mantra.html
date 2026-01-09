@@ -1,0 +1,65 @@
+---
+layout: default
+---
+{% include breadcrumb.html %}
+<article class="mantra wrap">
+  <header class="mantra-header">
+    <h1>{{ page.title }}</h1>
+    <p class="muted">{{ page.function_short }}</p>
+    <dl class="meta">
+      <dt>Orb event</dt><dd>{{ page.orb_event }}</dd>
+      <dt>Date</dt><dd>{{ page.event_date }}</dd>
+      <dt>Field teams</dt><dd>{{ page.teams }}</dd>
+    </dl>
+  </header>
+
+  <section class="orb-video">
+    <h2>Source Video</h2>
+    {% if page.video_embed %}
+      <div class="video-wrapper">
+        {{ page.video_embed | raw }}
+      </div>
+    {% elsif page.video_path %}
+      <video controls poster="{{ page.thumbnail | relative_url }}">
+        <source src="{{ page.video_path | relative_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    {% endif %}
+    <p class="muted small">Original field footage used for discovery. Archive copy: {{ page.video_copy_location }}</p>
+  </section>
+
+  <section class="mantra-system">
+    <h2>Mantra System</h2>
+    <dl class="mantra-data">
+      <dt>Pronunciation</dt><dd><strong>{{ page.pronunciation }}</strong></dd>
+      <dt>Breath chart</dt><dd>{{ page.breath_chart }}</dd>
+      <dt>Purpose / function</dt><dd>{{ page.function_full }}</dd>
+    </dl>
+  </section>
+
+  <section class="field-materials">
+    <h2>Field Materials</h2>
+    <ul>
+      {% if page.field_guide %}<li><a href="{{ page.field_guide | relative_url }}" download>Field Guide (PDF)</a></li>{% endif %}
+      {% if page.pronunciation_video %}<li><a href="{{ page.pronunciation_video | relative_url }}">Pronunciation tutorial (video)</a></li>{% endif %}
+      {% if page.transformer_wav %}<li><a href="{{ page.transformer_wav | relative_url }}" download>Transformer frequency (WAV)</a></li>{% endif %}
+    </ul>
+  </section>
+
+  <section class="glyphs">
+    <h2>Glyphs in this sequence</h2>
+    <div class="glyph-grid">
+      {% for glyph_ref in page.glyphs %}
+        {% assign g = site.glyphs | where: "id", glyph_ref | first %}
+        {% if g %}
+          {% include card-glyph.html glyph=g %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="notes">
+    <h2>Field notes & provenance</h2>
+    {{ content }}
+  </section>
+  </article>
