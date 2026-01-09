@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="wrap">
+    <h1>Mantra Library</h1>
+    <p class="lead">Catalog of all discovered Mantra systems extracted from orb light events. Each entry lists the source video, materials, and glyphs.</p>
+  </div>
+</section>
+
+<section class="filters wrap" aria-hidden="true">
+  <!-- Filters placeholder: event date, function, has-audio, has-glyphs -->
+  <label>Filter by function:
+    <select id="filter-function">
+      <option value="">All</option>
+    </select>
+  </label>
+</section>
+
+<section class="grid wrap" id="library-grid" aria-live="polite">
+  {% assign sorted = site.mantras | sort: 'title' %}
+  {% for mantra in sorted %}
+    {% include card-mantra.html mantra=mantra %}
+  {% endfor %}
+</section>
